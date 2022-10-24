@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\inc\\stamp\\stampplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\stamp\\stamp\\intermediate\\build\\win64\\stampeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\development\\stamp\\definitions.stamp.h",
+            "d:\\stamp\\stamp\\source\\stamp\\stampplayercontroller.h",
+            "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\inc\\stamp\\stampplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\inc\\stamp\\stampgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\stamp\\stamp\\intermediate\\build\\win64\\stampeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\development\\stamp\\definitions.stamp.h",
+            "d:\\stamp\\stamp\\source\\stamp\\stampgamemode.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "d:\\stamp\\stamp\\intermediate\\build\\win64\\unrealeditor\\inc\\stamp\\stampgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

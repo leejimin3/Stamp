@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Stamp.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Stamp.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\StampEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Stamp">
+      <UniqueIdentifier>{6A215E3C-8E20-3D61-A175-1955AF84C6AD}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Stamp\Stamp.Build.cs">
+      <Filter>Source\Stamp</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Stamp\Stamp.cpp">
+      <Filter>Source\Stamp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Stamp\Stamp.h">
+      <Filter>Source\Stamp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Stamp\StampCharacter.cpp">
+      <Filter>Source\Stamp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Stamp\StampCharacter.h">
+      <Filter>Source\Stamp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Stamp\StampGameMode.cpp">
+      <Filter>Source\Stamp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Stamp\StampGameMode.h">
+      <Filter>Source\Stamp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Stamp\StampPlayerController.cpp">
+      <Filter>Source\Stamp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Stamp\StampPlayerController.h">
+      <Filter>Source\Stamp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

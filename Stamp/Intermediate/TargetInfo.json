@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Stamp",
+			"Path": "D:\\Stamp\\Stamp\\Source\\Stamp.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "StampEditor",
+			"Path": "D:\\Stamp\\Stamp\\Source\\StampEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
