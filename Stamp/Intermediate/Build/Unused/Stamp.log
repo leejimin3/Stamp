@@ -1,0 +1,53 @@
+﻿  Using bundled DotNet SDK
+  Log file: C:\Users\82103\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (D:\Stamp).
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0223.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0223.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0242.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0242.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0396.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0396.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0564.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-0564.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-1252.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-1252.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-1515.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-1515.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-2531.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-2531.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5058.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5058.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6451.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6451.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6598.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6598.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6617.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6617.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-8425.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-8425.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-0223.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-0242.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-0396.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-0564.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-1252.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-1515.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-2531.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-5058.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-6451.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-6598.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-6617.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-8425.lib
+  Building StampEditor...
+  Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  [Adaptive Build] Excluded from Stamp unity file: StampPlayerController.cpp
+  Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
+    Executing up to 6 processes, one per physical core
+    Requested 1.5 GB free memory per action, 7.97 GB available: limiting max parallel actions to 5
+  Building 3 actions with 3 processes...
+  [1/3] Link UnrealEditor-Stamp.lib
+     D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.lib 라이브러리 및 D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.exp 개체를 생성하고 있습니다.
+  [2/3] Link UnrealEditor-Stamp.dll
+     D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.suppressed.lib 라이브러리 및 D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.suppressed.exp 개체를 생성하고 있습니다.
+  [3/3] WriteMetadata StampEditor.target
+  Total time in Parallel executor: 1.45 seconds
+  Total execution time: 2.68 seconds

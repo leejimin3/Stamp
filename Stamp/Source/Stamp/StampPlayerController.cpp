@@ -12,6 +12,7 @@ AStampPlayerController::AStampPlayerController()
 {
 	bShowMouseCursor = true;
 	DefaultMouseCursor = EMouseCursor::Default;
+
 }
 
 void AStampPlayerController::PlayerTick(float DeltaTime)
@@ -25,14 +26,7 @@ void AStampPlayerController::PlayerTick(float DeltaTime)
 		// Look for the touch location
 		FVector HitLocation = FVector::ZeroVector;
 		FHitResult Hit;
-		if(bIsTouch)
-		{
-			GetHitResultUnderFinger(ETouchIndex::Touch1, ECC_Visibility, true, Hit);
-		}
-		else
-		{
-			GetHitResultUnderCursor(ECC_Visibility, true, Hit);
-		}
+		GetHitResultUnderCursor(ECC_Visibility, true, Hit);
 		HitLocation = Hit.Location;
 
 		// Direct the Pawn towards that location
@@ -69,6 +63,12 @@ void AStampPlayerController::OnSetDestinationPressed()
 
 void AStampPlayerController::OnSetDestinationReleased()
 {
+	//Make Object TArray Type
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+
+	//Insert Custom Type "Human"
+	ObjectTypes.Add(EObjectTypeQuery::ObjectTypeQuery7);
+	
 	// Player is no longer pressing the input
 	bInputPressed = false;
 
@@ -78,11 +78,22 @@ void AStampPlayerController::OnSetDestinationReleased()
 		// We look for the location in the world where the player has pressed the input
 		FVector HitLocation = FVector::ZeroVector;
 		FHitResult Hit;
-		GetHitResultUnderCursor(ECC_Visibility, true, Hit);
-		HitLocation = Hit.Location;
+		bool bHitSomethinglist = GetHitResultUnderCursorForObjects(ObjectTypes,true, Hit);
 
+
+		// If Hit Something in the list, Move to actor. else, you move to hit location.
+		if(bHitSomethinglist == 1)
+		{
+			UAIBlueprintHelperLibrary::SimpleMoveToActor(this, Hit.GetActor());
+		}
+		else
+		{
+			GetHitResultUnderCursor(ECC_Visibility, true, Hit);
+			HitLocation = Hit.Location;
+			UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitLocation);
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, FXCursor, HitLocation, FRotator::ZeroRotator, FVector(1.f, 1.f, 1.f), true, true, ENCPoolMethod::None, true);
+		}
 		// We move there and spawn some particles
-		UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, HitLocation);
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, FXCursor, HitLocation, FRotator::ZeroRotator, FVector(1.f, 1.f, 1.f), true, true, ENCPoolMethod::None, true);
+		
 	}
 }
