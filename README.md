@@ -8,3 +8,10 @@
 
 ---
 
+## Programmer Rules
+
+1. Use Gitflow Workflow
+2. Use Remarks on the code to describe the content
+3. Write code using OOP & STL
+
+---
