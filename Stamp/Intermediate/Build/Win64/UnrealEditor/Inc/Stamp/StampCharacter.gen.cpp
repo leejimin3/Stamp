@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 	UPackage* Z_Construct_UPackage__Script_Stamp();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 // End Cross Module References
 	void AStampCharacter::StaticRegisterNativesAStampCharacter()
 	{
@@ -38,6 +39,10 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SphereCollision_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereCollision;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -77,9 +82,19 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStampCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStampCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStampCharacter_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStampCharacter_Statics::NewProp_CameraBoom_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Collision" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "StampCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision = { "SphereCollision", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStampCharacter, SphereCollision), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStampCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_TopDownCameraComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_CameraBoom,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStampCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AStampCharacter>::IsAbstract,
@@ -117,9 +132,9 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AStampCharacter, AStampCharacter::StaticClass, TEXT("AStampCharacter"), &Z_Registration_Info_UClass_AStampCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStampCharacter), 2739540899U) },
+		{ Z_Construct_UClass_AStampCharacter, AStampCharacter::StaticClass, TEXT("AStampCharacter"), &Z_Registration_Info_UClass_AStampCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStampCharacter), 3149757511U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_2929172019(TEXT("/Script/Stamp"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_3552124256(TEXT("/Script/Stamp"),
 		Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
