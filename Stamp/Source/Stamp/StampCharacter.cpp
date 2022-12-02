@@ -43,7 +43,9 @@ AStampCharacter::AStampCharacter()
 
 	SphereCollision = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollision"));
 	SphereCollision->SetSphereRadius(75.f);
-	SphereCollision->SetCollisionProfileName("Trigger");
+	SphereCollision->SetCollisionProfileName(TEXT("Trigger"));
+	SphereCollision->SetupAttachment(RootComponent);
+
 
 
 	// Activate ticking in order to update the cursor every frame.
@@ -51,7 +53,20 @@ AStampCharacter::AStampCharacter()
 	PrimaryActorTick.bStartWithTickEnabled = true;
 }
 
+void AStampCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	SphereCollision->OnComponentBeginOverlap.AddDynamic(this, &AStampCharacter::OnOverlapBegin);
+}
+
 void AStampCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }
+
+void AStampCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
+
+}
+
