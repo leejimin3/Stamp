@@ -46,7 +46,8 @@ AStampCharacter::AStampCharacter()
 	SphereCollision->SetCollisionProfileName(TEXT("Trigger"));
 	SphereCollision->SetupAttachment(RootComponent);
 
-
+	EnemyinAttackRange = false;
+	IsAttacking = false;
 
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
@@ -57,6 +58,7 @@ void AStampCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	SphereCollision->OnComponentBeginOverlap.AddDynamic(this, &AStampCharacter::OnOverlapBegin);
+	SphereCollision->OnComponentEndOverlap.AddDynamic(this, &AStampCharacter::OnOverlapEnd);
 }
 
 void AStampCharacter::Tick(float DeltaSeconds)
@@ -66,7 +68,41 @@ void AStampCharacter::Tick(float DeltaSeconds)
 
 void AStampCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
-
+	if (OtherActor != this)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
+		EnemyinAttackRange = true;
+		Attack();
+	}
+	
 }
 
+void AStampCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	EnemyinAttackRange = false;
+}
+
+void AStampCharacter::Attack()
+{
+
+	AController* const MyController = GetController();
+
+	if (IsAttacking == false && EnemyinAttackRange == true)
+	{
+		IsAttacking = true;
+		MyController->StopMovement();
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack!!"));
+
+
+		FTimerDelegate Delegate;
+		Delegate.BindLambda([&]()
+			{
+
+			});
+		FTimerHandle TimerHandle;
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, Delegate, 3.0f, false);
+
+		//GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		IsAttacking = false;
+	}
+}

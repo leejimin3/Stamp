@@ -19,11 +19,15 @@ struct FHitResult;
 #define FID_Stamp_Source_Stamp_StampCharacter_h_12_SPARSE_DATA
 #define FID_Stamp_Source_Stamp_StampCharacter_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAttack); \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
 	DECLARE_FUNCTION(execOnOverlapBegin);
 
 
 #define FID_Stamp_Source_Stamp_StampCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAttack); \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
 	DECLARE_FUNCTION(execOnOverlapBegin);
 
 

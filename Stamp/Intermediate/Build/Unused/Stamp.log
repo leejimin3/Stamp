@@ -1,34 +1,24 @@
 ﻿  Using bundled DotNet SDK
   Log file: C:\Users\82103\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (D:\Stamp).
-  Invalidating makefile for StampEditor (working set of source files changed)
-  Parsing headers for StampEditor
-    Running UnrealHeaderTool "D:\Stamp\Stamp\Stamp.uproject" "D:\Stamp\Stamp\Intermediate\Build\Win64\StampEditor\Development\StampEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\82103\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for StampEditor in 4.2481218 seconds
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-3041.dll
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-3041.pdb
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5121.dll
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5121.pdb
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6822.dll
-  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-6822.pdb
-  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-3041.lib
-  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-5121.lib
-  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-6822.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-2365.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-2365.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5424.dll
+  Deleted hot-reload file: D:\Stamp\Stamp\Binaries\Win64\UnrealEditor-Stamp-5424.pdb
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-2365.lib
+  Deleted hot-reload file: D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp-5424.lib
   Building StampEditor...
   Using Visual Studio 2019 14.29.30145 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from Stamp unity file: StampCharacter.cpp, StampPlayerController.cpp
+  [Adaptive Build] Excluded from Stamp unity file: StampCharacter.cpp
   Determining max actions to execute in parallel (6 physical cores, 12 logical cores)
     Executing up to 6 processes, one per physical core
-    Requested 1.5 GB free memory per action, 8.13 GB available: limiting max parallel actions to 5
-  Building 7 actions with 5 processes...
-  [1/7] Compile StampCharacter.gen.cpp
-  [2/7] Compile StampGameMode.cpp
-  [3/7] Compile StampCharacter.cpp
-  [4/7] Compile StampPlayerController.cpp
-  [5/7] Link UnrealEditor-Stamp.lib
+    Requested 1.5 GB free memory per action, 6.53 GB available: limiting max parallel actions to 4
+  Building 4 actions with 4 processes...
+  [1/4] Compile StampCharacter.cpp
+  [2/4] Link UnrealEditor-Stamp.lib
      D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.lib 라이브러리 및 D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.exp 개체를 생성하고 있습니다.
-  [6/7] Link UnrealEditor-Stamp.dll
+  [3/4] Link UnrealEditor-Stamp.dll
      D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.suppressed.lib 라이브러리 및 D:\Stamp\Stamp\Intermediate\Build\Win64\UnrealEditor\Development\Stamp\UnrealEditor-Stamp.suppressed.exp 개체를 생성하고 있습니다.
-  [7/7] WriteMetadata StampEditor.target
-  Total time in Parallel executor: 10.84 seconds
-  Total execution time: 18.08 seconds
+  [4/4] WriteMetadata StampEditor.target
+  Total time in Parallel executor: 2.99 seconds
+  Total execution time: 4.41 seconds
