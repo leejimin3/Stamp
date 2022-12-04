@@ -24,6 +24,9 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
 	FORCEINLINE class USphereComponent* GetSphereCollision() const { return SphereCollision; }
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation)
+		UAnimMontage* Attack_punch;
 	
 	
 private:

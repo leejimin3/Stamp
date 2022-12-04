@@ -28,7 +28,7 @@ AStampCharacter::AStampCharacter()
 	GetCharacterMovement()->bConstrainToPlane = true;
 	GetCharacterMovement()->bSnapToPlaneAtStart = true;
 
-	// Create a camera boom...
+	// Create a camera boom
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->SetUsingAbsoluteRotation(true); // Don't want arm to rotate when character does
@@ -36,7 +36,7 @@ AStampCharacter::AStampCharacter()
 	CameraBoom->SetRelativeRotation(FRotator(-60.0f, 45.0f, 0.0f));
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
-	// Create a camera...
+	// Create a camera
 	TopDownCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	TopDownCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	TopDownCameraComponent->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
@@ -91,18 +91,20 @@ void AStampCharacter::Attack()
 	{
 		IsAttacking = true;
 		MyController->StopMovement();
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack!!"));
+
+
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack!!"));
 
 
 		FTimerDelegate Delegate;
 		Delegate.BindLambda([&]()
 			{
-
+				PlayAnimMontage(Attack_punch, 1, NAME_None);
 			});
 		FTimerHandle TimerHandle;
-		GetWorld()->GetTimerManager().SetTimer(TimerHandle, Delegate, 3.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle, Delegate, 3.0f, true);
 
 		//GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
-		IsAttacking = false;
+		//IsAttacking = false;
 	}
 }

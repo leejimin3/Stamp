@@ -67,8 +67,8 @@ void AStampPlayerController::OnSetDestinationReleased()
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
 	//Insert Custom Type "Human"
+	ObjectTypes.Add(EObjectTypeQuery::ObjectTypeQuery3);
 	ObjectTypes.Add(EObjectTypeQuery::ObjectTypeQuery7);
-	
 	// Player is no longer pressing the input
 	bInputPressed = false;
 
