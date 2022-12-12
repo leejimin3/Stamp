@@ -51,6 +51,9 @@ private:
 	bool EnemyinAttackRange;
 
 	UPROPERTY()
+	FTimerHandle AttackTimerHandle;
+
+	UPROPERTY()
 	bool IsAttacking;
 
 };

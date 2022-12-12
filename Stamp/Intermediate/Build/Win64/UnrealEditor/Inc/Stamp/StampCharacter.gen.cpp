@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
 	DEFINE_FUNCTION(AStampCharacter::execAttack)
 	{
@@ -259,6 +260,10 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 		static void NewProp_EnemyinAttackRange_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_EnemyinAttackRange;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AttackTimerHandle_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AttackTimerHandle;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_IsAttacking_MetaData[];
 #endif
 		static void NewProp_IsAttacking_SetBit(void* Obj);
@@ -334,6 +339,12 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AStampCharacter_Statics::NewProp_EnemyinAttackRange = { "EnemyinAttackRange", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AStampCharacter), &Z_Construct_UClass_AStampCharacter_Statics::NewProp_EnemyinAttackRange_SetBit, METADATA_PARAMS(Z_Construct_UClass_AStampCharacter_Statics::NewProp_EnemyinAttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStampCharacter_Statics::NewProp_EnemyinAttackRange_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStampCharacter_Statics::NewProp_AttackTimerHandle_MetaData[] = {
+		{ "ModuleRelativePath", "StampCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AStampCharacter_Statics::NewProp_AttackTimerHandle = { "AttackTimerHandle", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AStampCharacter, AttackTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AStampCharacter_Statics::NewProp_AttackTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AStampCharacter_Statics::NewProp_AttackTimerHandle_MetaData)) }; // 589591453
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AStampCharacter_Statics::NewProp_IsAttacking_MetaData[] = {
 		{ "ModuleRelativePath", "StampCharacter.h" },
 	};
@@ -349,6 +360,7 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_SphereCollision,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_EnemyinAttackRange,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_AttackTimerHandle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStampCharacter_Statics::NewProp_IsAttacking,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AStampCharacter_Statics::StaticCppClassTypeInfo = {
@@ -387,9 +399,9 @@ void EmptyLinkFunctionForGeneratedCodeStampCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AStampCharacter, AStampCharacter::StaticClass, TEXT("AStampCharacter"), &Z_Registration_Info_UClass_AStampCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStampCharacter), 3804961734U) },
+		{ Z_Construct_UClass_AStampCharacter, AStampCharacter::StaticClass, TEXT("AStampCharacter"), &Z_Registration_Info_UClass_AStampCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStampCharacter), 3200574666U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_2862465632(TEXT("/Script/Stamp"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_1725411169(TEXT("/Script/Stamp"),
 		Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Stamp_Source_Stamp_StampCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

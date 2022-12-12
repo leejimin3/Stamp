@@ -79,6 +79,9 @@ void AStampCharacter::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor
 
 void AStampCharacter::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
+	GetWorld()->GetTimerManager().ClearTimer(AttackTimerHandle);
+	StopAnimMontage(Attack_punch);
+	IsAttacking = false;
 	EnemyinAttackRange = false;
 }
 
@@ -92,19 +95,19 @@ void AStampCharacter::Attack()
 		IsAttacking = true;
 		MyController->StopMovement();
 
-
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack!!"));
-
-
 		FTimerDelegate Delegate;
+
+		PlayAnimMontage(Attack_punch, 1, NAME_None);
 		Delegate.BindLambda([&]()
 			{
 				PlayAnimMontage(Attack_punch, 1, NAME_None);
+				if()
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack!!"));
 			});
-		FTimerHandle TimerHandle;
-		GetWorld()->GetTimerManager().SetTimer(TimerHandle, Delegate, 3.0f, true);
 
-		//GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		GetWorld()->GetTimerManager().SetTimer(AttackTimerHandle, Delegate, 3.0f, true);
+
+		//GetWorld()->GetTimerManager().ClearTimer(AttackTimerHandle);
 		//IsAttacking = false;
 	}
 }
